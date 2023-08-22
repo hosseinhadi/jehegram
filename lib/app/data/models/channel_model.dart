@@ -3,6 +3,7 @@ import 'package:isar/isar.dart';
 import 'package:jehegram/app/data/models/file_model.dart';
 import 'package:jehegram/app/data/models/message_model.dart';
 import 'package:jehegram/app/data/models/person_model.dart';
+part 'channel_model.g.dart';
 
 @collection
 class ChannelModel {

@@ -1,5 +1,7 @@
 import 'package:isar/isar.dart';
 
+part 'phone_model.g.dart';
+
 
 class PhoneModel{
   PhoneModel({

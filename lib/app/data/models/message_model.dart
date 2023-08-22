@@ -4,6 +4,8 @@ import 'package:jehegram/app/data/models/message_reaction_model.dart';
 import 'package:jehegram/app/data/models/messageseenstate_model.dart';
 import 'package:jehegram/app/data/models/person_model.dart';
 
+part 'message_model.g.dart';
+
 
 class MessageModel{
   MessageModel({

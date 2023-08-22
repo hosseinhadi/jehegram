@@ -3,6 +3,9 @@ import 'package:jehegram/app/data/models/person_model.dart';
 import 'package:isar/isar.dart';
 
 
+part 'session_model.g.dart';
+
+
 class SessionModel{
   SessionModel({this.IP,
     this.startDateTime,

@@ -5,6 +5,8 @@ import 'file_model.dart';
 import 'group_model.dart';
 import 'message_model.dart';
 
+part 'person_model.g.dart';
+
 
 @collection
 class PersonModel {
