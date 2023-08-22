@@ -1,6 +1,8 @@
 import 'package:isar/isar.dart';
 import 'package:jehegram/app/data/models/person_model.dart';
 
+part 'session_model.g.dart';
+
 @embedded
 class SessionModel {
   SessionModel({

@@ -2,6 +2,8 @@ import 'package:isar/isar.dart';
 
 import 'enums/file_type_enum.dart';
 
+part 'file_model.g.dart';
+
 @embedded
 class FileModel {
   FileModel(

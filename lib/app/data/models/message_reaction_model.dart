@@ -3,6 +3,8 @@ import 'package:jehegram/app/data/models/person_model.dart';
 
 import 'enums/message_reacion_type_enum.dart';
 
+part 'message_reaction.g.dart';
+
 @embedded
 class MessageReactionModel {
   MessageReactionModel({
