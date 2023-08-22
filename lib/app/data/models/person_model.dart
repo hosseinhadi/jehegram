@@ -1,12 +1,14 @@
+import 'package:isar/isar.dart';
 import 'package:jehegram/app/data/models/phone_model.dart';
 
 import 'file_model.dart';
 import 'group_model.dart';
 import 'message_model.dart';
 
+@collection
 class PersonModel {
   PersonModel({
-    this.pk,
+    this.id,
     this.firstName,
     this.lastName,
     this.shownName,
@@ -20,7 +22,7 @@ class PersonModel {
     this.isMuted,
   });
 
-  int? pk;
+  Id? id;
   String? firstName;
   String? lastName;
   String? shownName;

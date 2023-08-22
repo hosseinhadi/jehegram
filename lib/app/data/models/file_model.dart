@@ -1,5 +1,8 @@
+import 'package:isar/isar.dart';
+
 import 'enums/file_type_enum.dart';
 
+@embedded
 class FileModel {
   FileModel(
       {this.fileType,
@@ -7,11 +10,12 @@ class FileModel {
       this.dateTimeDeleted,
       this.extension,
       this.name,
-      this.pk,
+      this.id,
       this.size});
 
-  int? pk;
+  Id? id;
   String? name;
+  @enumerated
   FileType? fileType;
   DateTime? dateTimeAdded;
   DateTime? dateTimeDeleted;

@@ -1,12 +1,14 @@
+import 'package:isar/isar.dart';
 
-
-class PhoneModel{
+@embedded
+class PhoneModel {
   PhoneModel({
+    this.id,
     this.countryCode,
     this.phoneNumber,
   });
 
+  Id? id;
   int? countryCode;
   int? phoneNumber;
-
 }

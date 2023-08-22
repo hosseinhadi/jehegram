@@ -6,38 +6,35 @@ import 'package:jehegram/app/data/models/person_model.dart';
 
 @collection
 class ChannelModel {
-  ChannelModel({
-    this.pk,
-    this.comID,
-    this.adminPerson,
-    this.isPublic,
-    this.name,
-    this.profilePictureFile,
-    this.information,
-    this.members = const <PersonModel>[],
-    this.messages = const <MessageModel>[],
-    this.dateCreated,
-    this.pinnedMessages=const <MessageModel>[],
-    this.blacklistPersons=const <PersonModel>[],
-    this.isMuted,
-    this.deletedTime
-  });
+  ChannelModel(
+      {this.id,
+      this.comID,
+      this.adminPerson,
+      this.isPublic,
+      this.name,
+      this.profilePictureFile,
+      this.information,
+      this.members,
+      this.messages,
+      this.dateCreated,
+      this.pinnedMessages,
+      this.blacklistPersons,
+      this.isMuted,
+      this.deletedTime});
 
-
-
-
-  int? pk;
+  @collection
+  Id? id;
   int? comID;
   PersonModel? adminPerson;
   bool? isPublic;
   String? name;
   FileModel? profilePictureFile;
   String? information;
-  List<PersonModel> members;
-  List<MessageModel> messages;
+  IsarLinks<PersonModel>? members;
+  List<MessageModel>? messages;
   DateTime? dateCreated;
-  List<MessageModel> pinnedMessages;
-  List<PersonModel> blacklistPersons;
+  List<MessageModel>? pinnedMessages;
+  IsarLinks<PersonModel>? blacklistPersons;
   bool? isMuted;
   DateTime? deletedTime;
 }
