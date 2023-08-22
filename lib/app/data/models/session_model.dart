@@ -1,19 +1,22 @@
+import 'package:isar/isar.dart';
 import 'package:jehegram/app/data/models/person_model.dart';
+part 'session_model.g.dart';
 
-class SessionModel{
-  SessionModel({this.IP,
+@embedded
+class SessionModel {
+  SessionModel({
+    this.IP,
     this.startDateTime,
     this.endDateTime,
     this.person,
     this.deviceType,
+    this.Id,
   });
 
+  Id? Id;
   String? IP;
   String? deviceType;
   DateTime? startDateTime;
   DateTime? endDateTime;
-  PersonModel? person;
-
-
-
+  IsarLink<PersonModel>? person;
 }

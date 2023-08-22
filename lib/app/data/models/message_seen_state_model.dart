@@ -1,15 +1,18 @@
+import 'package:isar/isar.dart';
 import 'package:jehegram/app/data/models/person_model.dart';
+part 'message_seen_state_model.g.dart';
 
+@embedded
 class MessageSeenStateModel {
   MessageSeenStateModel({
-    this.pk,
+    this.Id,
     this.person,
     this.date,
     this.deletedTime,
   });
 
-  int? pk;
-  PersonModel? person;
+  Id? Id;
+  IsarLink<PersonModel>? person;
   DateTime? date;
   DateTime? deletedTime;
 }
