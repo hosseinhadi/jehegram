@@ -1,15 +1,18 @@
+import 'package:isar/isar.dart';
 import 'package:jehegram/app/data/models/file_model.dart';
 import 'package:jehegram/app/data/models/message_model.dart';
 import 'package:jehegram/app/data/models/person_model.dart';
 
+
+@collection
 class GroupModel {
   GroupModel({
     this.isMuted,
     this.dateCreated,
-    this.blacklistPersons = const <PersonModel>[],
-    this.messages = const <MessageModel>[],
-    this.members = const <PersonModel>[],
-    this.pinnedMessages = const <MessageModel>[],
+    this.blacklistPersons,
+    this.messages,
+    this.members,
+    this.pinnedMessages,
     this.information,
     this.profilePictureFile,
     this.isPublic,
@@ -17,15 +20,16 @@ class GroupModel {
     this.name,
   });
 
+  Id? id;
   int? comID;
   bool? isPublic;
   FileModel? profilePictureFile;
   String? name;
   String? information;
-  List<PersonModel> members;
-  List<MessageModel> messages;
+  IsarLinks<PersonModel>? members;
+  List<MessageModel>? messages;
   DateTime? dateCreated;
-  List<MessageModel> pinnedMessages;
-  List<PersonModel> blacklistPersons;
+  List<MessageModel>? pinnedMessages;
+  IsarLinks<PersonModel>? blacklistPersons;
   bool? isMuted;
 }

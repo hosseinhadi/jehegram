@@ -2,6 +2,8 @@ import 'package:jehegram/app/data/models/person_model.dart';
 
 import 'enums/message_reacion_type_enum.dart';
 
+import 'package:isar/isar.dart';
+
 class MessageReactionModel {
   MessageReactionModel({
     this.messageReactionType,
@@ -10,6 +12,7 @@ class MessageReactionModel {
     this.person,
   });
 
+  Id? id;
   MessageReactionType? messageReactionType;
   PersonModel? person;
   DateTime? dateTimeAdded;
