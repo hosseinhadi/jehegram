@@ -1,13 +1,17 @@
 import 'package:jehegram/app/data/models/person_model.dart';
+part 'session_model.g.dart';
 
 class SessionModel{
-  SessionModel({this.IP,
+  SessionModel({
+    this.id,
+    this.IP,
     this.startDateTime,
     this.endDateTime,
     this.person,
     this.deviceType,
   });
 
+  Id? id;
   String? IP;
   String? deviceType;
   DateTime? startDateTime;

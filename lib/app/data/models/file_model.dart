@@ -1,4 +1,5 @@
 import 'enums/file_type_enum.dart';
+part 'file_model.g.dart';
 
 class FileModel {
   FileModel(
@@ -7,11 +8,13 @@ class FileModel {
       this.dateTimeDeleted,
       this.extension,
       this.name,
-      this.pk,
+      this.id,
       this.size});
 
-  int? pk;
+
+  Id? id;
   String? name;
+  @enumerated
   FileType? fileType;
   DateTime? dateTimeAdded;
   DateTime? dateTimeDeleted;

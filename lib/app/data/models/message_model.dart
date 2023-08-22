@@ -1,38 +1,38 @@
 import 'package:jehegram/app/data/models/file_model.dart';
 import 'package:jehegram/app/data/models/message_reaction_model.dart';
-import 'package:jehegram/app/data/models/messageseenstate_model.dart';
+import 'package:jehegram/app/data/models/message_seen_state_model.dart';
 import 'package:jehegram/app/data/models/person_model.dart';
-
+part 'message_model.g.dart';
 
 class MessageModel{
   MessageModel({
-    required this.pk,
+    required this.id,
     this.senderPerson,
-    this.files = const <FileModel>[],
+    this.files,
     this.dateAdded,
     this.dateEdited,
     this.deletedTime,
     this.replyToMessage,
     this.forwardedFormPerson,
-    this.seenBy = const <MessageSeenStateModel>[],
-    this.MentionPerson = const <PersonModel>[],
-    this.messagesReactions = const <MessageReactionModel>[],
+    this.seenBy,
+    this.mentionedPersons,
+    this.messagesReactions,
     this.inThreadOfMessage
   });
 
 
-  int pk;
+  Id id;
   PersonModel? senderPerson;
   String? text;
-  List<FileModel> files;
+  List<FileModel>? files;
   DateTime? dateAdded;
   DateTime? dateEdited;
   DateTime? deletedTime;
   MessageModel? replyToMessage;
   PersonModel? forwardedFormPerson;
-  List<MessageSeenStateModel> seenBy;
-  List<PersonModel> MentionPerson;
-  List<MessageReactionModel> messagesReactions;
+  List<MessageSeenStateModel>? seenBy;
+  IsarLinks<PersonModel>? mentionedPersons;
+  List<MessageReactionModel>? messagesReactions;
   MessageModel? inThreadOfMessage;
 
 
