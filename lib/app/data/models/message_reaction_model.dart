@@ -14,6 +14,7 @@ class MessageReactionModel {
   });
 
   Id? id;
+  @enumerated
   MessageReactionType? messageReactionType;
   IsarLink<PersonModel>? person;
   DateTime? dateTimeAdded;
